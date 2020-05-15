@@ -134,6 +134,7 @@ const movingScale = 0.3;
 
 function showMessage(m) {
 	console.log(m);
+	document.querySelector("#message").setAttribute('value', m);
 }
 function updateAnimation () {
 			showPositionStatus();
