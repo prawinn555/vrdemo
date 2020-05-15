@@ -128,7 +128,7 @@ async function changeMovingDirections(directionKey, name, delay) {
 
 const limitMinY = -0.6;
 const limitMaxY = 2.5;
-const cycleDelay = 2000;
+const cycleDelay = 1000;
 // moving scale per cycle.
 const movingScale = 0.3;
 
