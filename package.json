@@ -1,0 +1,14 @@
+{
+  "name": "vrdemo",
+  "version": "1.0.0",
+  "description": "Virtual reality demo",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "free",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
