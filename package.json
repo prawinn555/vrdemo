@@ -2,13 +2,18 @@
   "name": "vrdemo",
   "version": "1.0.0",
   "description": "Virtual reality demo",
+  "homepage": "http://prawinn555.github.io/vrdemo",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "deploy": "gh-pages -d static"
   },
   "author": "",
   "license": "free",
   "dependencies": {
     "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }

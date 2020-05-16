@@ -1,5 +1,5 @@
 var modelset = {};
-modelset['Dinosaur'] = 'https://cdn.glitch.com/324a5290-5aa7-4efc-92d6-ae0736433b12%2Fspinosaurus.glb';
+modelset['Dinosaur'] = window.location.href + 'dinosaur.glb';
 modelset['Shark'] = window.location.href + 'shark/scene.gltf';
 
 
@@ -58,6 +58,10 @@ function toggleMove(delta) {
 	
     const d = dimensions.find( el => delta[el]);
 	const k = `move-${d}`;
+	
+			var x = document.activeElement.tagName;
+		document.activeElement.blur();
+	    console.log('blur ', x);
 
 	let stop = movingDirections[k]===delta[d];
 	if(stop) {
@@ -96,6 +100,8 @@ function toggleRotate(delta) {
 		changeMovingDirections(k, delta[d], cycleDelay);
 	}
 	updateBtnActive(stop, k, delta.y);
+	
+
 }
 
 
@@ -111,6 +117,9 @@ example
 var movingDirections = {};
 
 async function changeMovingDirections(directionKey, name, delay) {
+
+
+
 	movingDirections[directionKey] = name;
 	//console.log(`changeMovingDirections ${directionKey} ${name} delay ${delay}ms`);
 			
@@ -128,12 +137,13 @@ async function changeMovingDirections(directionKey, name, delay) {
 
 const limitMinY = -0.6;
 const limitMaxY = 2.5;
-const cycleDelay = 2000;
+const cycleDelay = 1000;
 // moving scale per cycle.
 const movingScale = 0.3;
 
 function showMessage(m) {
 	console.log(m);
+	document.querySelector("#message").setAttribute('value', m);
 }
 function updateAnimation () {
 			showPositionStatus();
