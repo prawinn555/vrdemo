@@ -246,11 +246,15 @@ function createElementFromHTML(htmlString) {
 	return div.firstChild;
 }
 
-function showMenu() {
-	document.querySelector('#toggleMenuShow').classList.add('hidden');
-	document.querySelector('#menu').classList.remove('hidden');
-}
-function hideMenu() {
-	document.querySelector('#toggleMenuShow').classList.remove('hidden');
-	document.querySelector('#menu').classList.add('hidden');
+function toggleDisplay(array) {
+	array.forEach(id => {
+		let el = document.querySelector(id);
+		let c = 'hidden';
+		if(el.classList.contains(c)) {
+			el.classList.remove(c)
+		} else {
+			el.classList.add(c);
+		}
+	});
+
 }

@@ -28,14 +28,16 @@ body {
 		display:none;
 	}
 	button {
-		font-size: 0.9em;
+		font-size: 1.2em;
 		padding : 0px;
 	}
 	select {
 		font-size: 0.7em;
 		padding : 1px;
 	}
-
+	button.buttonText {
+		font-size: 1em;
+	}
 }
 
 
