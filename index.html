@@ -79,13 +79,15 @@
 			onclick="toggleDisplay(['#toggleMenuShow','#menu'])">➕ Menu</button>
 	  
 	  <div id="menu">
-	      <a href="https://aframe.io" target="__blank">A-Frame</a> 
-			<a href="https://github.com/prawinn555/vrdemo"  target="__blank">Demo<a>
-			<button class="hideOnMobile" onclick="window.location.reload()">Reload</button>
+			<div class="hideOnMobile">
+		      	<a href="https://aframe.io" target="__blank">A-Frame</a> 
+				<a href="https://github.com/prawinn555/vrdemo"  target="__blank">Demo<a>
+			</div>
+			<button onclick="window.location.reload()">Reload</button>
 			<button id="toggleMenuHide" title="hide menu" onclick="toggleDisplay(['#toggleMenuShow','#menu'])">➖</button>
-			<button id="toggleMenuLess" title="Reduce menu" class="buttonText"
+			<button id="toggleMenuLess" title="Reduce menu" class="small"
 					onclick="toggleDisplay(['#toggleMenuMore','#toggleMenuLess', '#moreMenu'])" >Less</button>
-			<button id="toggleMenuMore" title="Expand Menu" class="buttonText hidden" 
+			<button id="toggleMenuMore" title="Expand Menu" class="small hidden" 
 					onclick="toggleDisplay(['#toggleMenuMore','#toggleMenuLess', '#moreMenu'])">More</button>
 		  <div id="moreMenu">
 		      <p>

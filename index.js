@@ -236,6 +236,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	showPositionStatus();
 	showRotationStatus();
 	setModel('Dinosaur');
+	
+	if(window.screen.availWidth<800) {
+		toggleDisplay(['#toggleMenuMore','#toggleMenuLess', '#moreMenu']);
+	}
 });
 
 function createElementFromHTML(htmlString) {
