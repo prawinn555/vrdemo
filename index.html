@@ -75,55 +75,62 @@
     </a-scene>
 
     <div id="text">
-      <h1><a href="https://aframe.io" target="__blank">A-Frame</a> 
-		<a href="https://github.com/prawinn555/vrdemo"  target="__blank">Demo<a></h1>
-      <p><button onclick="window.location.reload()">Reload</button>
-      <p>
-        Choose a model : 
-		<select class="selectModel" name="selectModel"  >
-			<option selected >Dinosaur</option>
-			<option>Shark</option>
-		</select>
-      </p>
-      <p>
-        Choose a background : 
-		<select class="selectBG"   >
-		</select>
-      </p>    
-      <p>
-       <div> (current position   
-		<span class="positionStatus"></span>)</div>
-       <div> 
-			X <button id="upX"   class="move-x up"   onclick="toggleMove({x:1})"
-						title="click=>move | click again=>stop" >👉 </button>
-			  <button id="downX" class="move-x down" onclick="toggleMove({x:-1})" 
-						title="click=>move | click again=>stop" >👈 </button>
-			Y <button id="upY"   class="move-y up"   onclick="toggleMove({y:1})" 
-						title="click=>move | click again=>stop" >☝️ </button>
-			  <button id="downY" class="move-y down" onclick="toggleMove({y:-1})" 
-						title="click=>move | click again=>stop" >👇 </button>
-			Z <button id="upY"   class="move-z up"   onclick="toggleMove({z:1})" 
-						title="click=>move | click again=>stop"> ↙️ </button>
-			  <button id="downY" class="move-z down" onclick="toggleMove({z:-1})" 
-						title="click=>move | click again=>stop" >↖️  </button>
-		</div>
-      </p>
-      <p>
-       <div> (current rotation   
-		<span class="rotationStatus"></span>)</div>
-       <div> 
-			  <button id="upX"   class="rotation up"    onclick="toggleRotate({y:1})"
-							title="click=>move | click again=>stop" > 👉 </button>
-			  <button id="downX" class="rotation down"  onclick="toggleRotate({y:-1})" 
-							title="click=>move | click again=>stop" >👈 </button>
-		</div>
-      </p>   
-      <p>Use your mouse/keyboard arrows to follow the animal</p>
-      <p>
-       <div> (current animation   
-		<span class="animationStatus"></span>)</div>
-      </p>	  
+      <button id="toggleMenuShow" class="hidden" title="show Menu" onclick="showMenu()">➕</button>
 	  
+	  <div id="menu">
+	      <a href="https://aframe.io" target="__blank">A-Frame</a> 
+			<a href="https://github.com/prawinn555/vrdemo"  target="__blank">Demo<a>
+			<button class="hideOnMobile" onclick="window.location.reload()">Reload</button>
+			<button id="toggleMenuHide" title="hide menu" onclick="hideMenu()">➖</button>
+			
+
+	      <p>
+	        Choose a model : 
+			<select class="selectModel" name="selectModel"  >
+				<option selected >Dinosaur</option>
+				<option>Shark</option>
+			</select>
+	      </p>
+	      <p>
+	        Choose a background : 
+			<select class="selectBG"   >
+			</select>
+	      </p>    
+	      <p>
+	       <div class="hideOnMobile"> (current position   
+			<span class="positionStatus"></span>)</div>
+	       <div> 
+				X <button id="upX"   class="move-x up"   onclick="toggleMove({x:1})"
+							title="click=>move | click again=>stop" >👉 </button>
+				  <button id="downX" class="move-x down" onclick="toggleMove({x:-1})" 
+							title="click=>move | click again=>stop" >👈 </button>
+				Y <button id="upY"   class="move-y up"   onclick="toggleMove({y:1})" 
+							title="click=>move | click again=>stop" >☝️ </button>
+				  <button id="downY" class="move-y down" onclick="toggleMove({y:-1})" 
+							title="click=>move | click again=>stop" >👇 </button>
+				Z <button id="upY"   class="move-z up"   onclick="toggleMove({z:1})" 
+							title="click=>move | click again=>stop"> ↙️ </button>
+				  <button id="downY" class="move-z down" onclick="toggleMove({z:-1})" 
+							title="click=>move | click again=>stop" >↖️  </button>
+			</div>
+	      </p>
+	      <p>
+	       <div class="hideOnMobile"> (current rotation   
+			<span class="rotationStatus"></span>)</div>
+	       <div> 
+				Rotate <button id="upX"   class="rotation up"    onclick="toggleRotate({y:1})"
+								title="click=>move | click again=>stop" > 👉 </button>
+				  <button id="downX" class="rotation down"  onclick="toggleRotate({y:-1})" 
+								title="click=>move | click again=>stop" >👈 </button>
+			</div>
+	      </p>   
+	      <div class="hideOnMobile" >Use your mouse/keyboard arrows to follow the animal</div>
+	
+	      <div class="hideOnMobile" >
+	       <div> (current animation   
+			<span class="animationStatus"></span>)</div>
+	      </div>	  
+	  </div>
     </div>
 
 

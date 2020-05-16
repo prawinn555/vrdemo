@@ -245,3 +245,12 @@ function createElementFromHTML(htmlString) {
 	// Change this to div.childNodes to support multiple top-level nodes
 	return div.firstChild;
 }
+
+function showMenu() {
+	document.querySelector('#toggleMenuShow').classList.add('hidden');
+	document.querySelector('#menu').classList.remove('hidden');
+}
+function hideMenu() {
+	document.querySelector('#toggleMenuShow').classList.remove('hidden');
+	document.querySelector('#menu').classList.add('hidden');
+}
