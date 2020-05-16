@@ -240,6 +240,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	if(window.screen.availWidth<800) {
 		toggleDisplay(['#toggleMenuMore','#toggleMenuLess', '#moreMenu']);
 	}
+
 });
 
 function createElementFromHTML(htmlString) {

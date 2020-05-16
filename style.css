@@ -5,10 +5,9 @@ body {
   margin: 0.2em;
 }
 
-	div#text {
-	  position: absolute;
-	  background-color: rgba(255, 255, 255, 0.7)
-	}
+div#text {
+  background-color: rgba(255, 255, 255, 0.7)
+}
 
 .hidden {
 	display:none;
@@ -16,11 +15,13 @@ body {
 @media only screen and (max-width: 800px) {
 
 	div#text {
-	  left: 1px; 
-	  top: 1px;
+      position: absolute;
+	  left: 0.5em; 
+	  top: 3em;
 	  padding: 1px;
 	  max-width: 30%;
-	  font-size: 0.8em;
+	  font-size: 0.7em;
+	  transform: rotate(90deg);
 	}
 	.hideOnMobile {
 		display:none;
@@ -32,12 +33,14 @@ body {
 	button.small {
 		font-size: 1em;
 	}
+
 }
 
 
 @media only screen and (min-width: 801px) {
 
 	div#text {
+      position: absolute;
 	  left: 6px; 
 	  top: 6px;
 	  padding: 6px;
