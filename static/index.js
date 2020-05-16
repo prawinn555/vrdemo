@@ -236,6 +236,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	showPositionStatus();
 	showRotationStatus();
 	setModel('Dinosaur');
+	
+	if(window.screen.availWidth<800) {
+		toggleDisplay(['#toggleMenuMore','#toggleMenuLess', '#moreMenu']);
+	}
 });
 
 function createElementFromHTML(htmlString) {
@@ -244,4 +248,17 @@ function createElementFromHTML(htmlString) {
 
 	// Change this to div.childNodes to support multiple top-level nodes
 	return div.firstChild;
+}
+
+function toggleDisplay(array) {
+	array.forEach(id => {
+		let el = document.querySelector(id);
+		let c = 'hidden';
+		if(el.classList.contains(c)) {
+			el.classList.remove(c)
+		} else {
+			el.classList.add(c);
+		}
+	});
+
 }
